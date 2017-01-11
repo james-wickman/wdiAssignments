@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>Products List</title>
+</head>
+<body>
+	<meta charset = "utf-8">
+
+	<div onChange="red_background()">
+		<input type="radio" name="bgColor" value="red" id="red-radio">Red
+		<input type="radio" name="bgColor" value="blue" id="blue-radio">Blue
+		<input type="radio" name="bgColor" value="yellow" id="yellow-radio">Yellow
+		<input type="radio" name="bgColor" value="green" id="green-radio">Green
+	</div>
+
+	<div>
+			<div>
+				<label id="nameLabels">Product Name</label>
+				<label id="nameInputOver" for = "nameInput">Tags: </label>
+				<input type="text" id="nameInput" value="">
+			</div>
+			<div>
+				<label id="quantityLabels">Quantity Sold</label>
+				<input type="number" id="quantityInput" value="">
+			</div>
+			<div>
+				<label id="priceLabels">Price Per Item</label>
+				<input type="number" id="priceInput" value="" >
+			</div>
+		<div>
+			<button onClick=addProduct() id="addProduct">Add Product</button>
+		</div>
+	</div>
+
+
+	<div>
+		<h3>Current Product Information</h3>
+		<div>
+			<label>Product Name:</label>
+            <p  id="nameLabel"></p>
+		</div>
+		<div>
+			<label>Quantity Sold:</label>
+            <p  id="quantityLabel"></p>
+		</div>
+		<div>
+			<label>Price Per Item:</label>
+            <p id="priceLabel"></p>
+		</div>
+	</div>
+	<hr>
+
+	<table id="productsTable">
+		<tr>
+			<th>Product Name</th>
+			<th>Quantity Sold</th>
+			<th>Price</th>
+		</tr>
+		<tr>
+			<td>Levis</td>
+			<td>23</td>
+			<td>3.12</td>
+		</tr>
+		<tr>
+			<td>Nike</td>
+			<td>12</td>
+			<td>1.12</td>
+		</tr>
+		<tr>
+			<td>Toms</td>
+			<td>43</td>
+			<td>23.12</td>
+		</tr>
+        <tr>
+			<td>Toms</td>
+			<td>43</td>
+			<td>23.12</td>
+		</tr>
+		<tr>
+			<td>Snickers</td>
+			<td>23</td>
+			<td>3.12</td>
+		</tr>
+		<tr>
+			<td>Steak Sandwich</td>
+			<td>23</td>
+			<td>3.12</td>
+		</tr>
+    </table><hr>
+	<h3 id="total-items"></h3>
+	<h3 id="total-sales"></h3>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="projects.js"></script>
+</body>
+</html>
