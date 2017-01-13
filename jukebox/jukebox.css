@@ -12,6 +12,16 @@ img {
     margin-top: 15px;
     background-color: lightblue;
 }
+#scrollLeft {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+#scrollRight {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 60px;
+}
 #leftMenue {
     width: 150px;
     height: 700px;
@@ -25,8 +35,8 @@ img {
     width: 718px;
     height: 485px;
     position: absolute;
-    margin-top:233px;
-    margin-left: 170px;
+    margin-top:180px;
+    margin-left: 155px;
     border: 2px solid blue;
     background-color: silver;
 }
@@ -34,9 +44,25 @@ img {
     width:718px;
     height: 70px;
     position:absolute;
-    margin-top: 645px;
-    margin-left: 173px;
-    background-color:deepskyblue;
+    margin-top: 595px;
+    margin-left: 157px;
+    background-color: lightblue;
+}
+#leftButton {;
+    width: 200px;
+    background-color: lightblue;
+    border: none;
+    margin-left: 50px;
+}
+#middleButton {;
+    width: 200px;
+    background-color: lightblue;
+    border: none;
+}
+#rightButton {;
+    width: 200px;
+    background-color: lightblue;
+    border: none;
 }
 #pause {
     margin-top: 10px;
@@ -60,4 +86,8 @@ img {
     height: 50px;
     width: 27px;
     background-color: dodgerblue;
+}
+#searchResults {
+    width: 150px;
+    height: 600px;
 }
