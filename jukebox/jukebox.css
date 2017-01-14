@@ -35,8 +35,8 @@ img {
     width: 718px;
     height: 485px;
     position: absolute;
-    margin-top:180px;
-    margin-left: 155px;
+    margin-top:233px;
+    margin-left: 170px;
     border: 2px solid blue;
     background-color: silver;
 }
@@ -44,8 +44,8 @@ img {
     width:718px;
     height: 70px;
     position:absolute;
-    margin-top: 595px;
-    margin-left: 157px;
+    margin-top: 645px;
+    margin-left: 173px;
     background-color: lightblue;
 }
 #leftButton {;
@@ -88,6 +88,6 @@ img {
     background-color: dodgerblue;
 }
 #searchResults {
-    width: 150px;
-    height: 600px;
+    width: 100px;
+    height: 400px;
 }

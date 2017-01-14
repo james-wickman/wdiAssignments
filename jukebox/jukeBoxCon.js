@@ -34,6 +34,9 @@
         this.nextSong = 2;
         this.songNow = 1;
         this.audioFiles = $('#audioFiles');
+        this.searchBar = $('#searchBar');
+        this.searchButton = $('#searchButton');
+        this.searchResults = $('#searchResults');
     }
     JukeBox.prototype.playSong = function() {
         $(this.songPlace).attr('src', this.songs[this.songNumber].fileName);
@@ -84,7 +87,79 @@
         this.songNow = this.songNumber;
         
     }
-    
-    JukeBox.prototype.addSong = function() {
 
+    JukeBox.prototype.findArtist = function() {
+        var myButton;
+        this.searchResults.html('');
+        var constructorThis = this
+        var requestObject = {
+            url: 'https://api.spotify.com/v1/search',
+            data: {
+                q: this.searchBar.val(),
+                type: 'artist',
+            },
+            success: function(results) { 
+                console.log(results);
+                for ( var i = 0; i < results.artists.items.length; i++){
+                    myButton = $('<button id="' + results.artists.items[i].id + '">' + results.artists.items[i].name + '</button>')
+                    constructorThis.searchResults.append(myButton);
+                    console.log(results.artists.items[i].name);
+                    myButton.click(function() {
+                        constructorThis.searchResults.html('');
+                        console.log(this.id)
+                        $.ajax({
+                            url: 'https://api.spotify.com/v1/artists/' + this.id + '/albums',
+
+                            success: function(results) {
+                                
+                                
+                                for ( var i = 0; i < results.items.length; i++){
+                                    albumThis = this;
+                                    this.albumImage = results.items[i].images[1].url;
+                                    console.log(results.items[i])
+                                    myButton = $('<button id="' + results.items[i].id + '">' + results.items[i].name + '</button>')
+                                    constructorThis.searchResults.append(myButton);
+                                    myButton.click(function() {
+                                        constructorThis.searchResults.html('');
+                                        console.log(this.id);
+                                        $.ajax({
+                                            url: 'https://api.spotify.com/v1/albums/' + this.id + '/tracks',
+
+                                            success: function(results) {
+                                                for (var i = 0; i < results.items.length; i++) {
+                                                    console.log(results.items[i].name)
+                                                    myButton = $('<button id="' + results.items[i].id + '">' + results.items[i].name + '</button>')
+                                                    constructorThis.searchResults.append(myButton);
+                                                    myButton.click(function() {
+                                                        constructorThis.searchResults.html('');
+                                                        $.ajax({
+                                                            url: 'https://api.spotify.com/v1/tracks/' + this.id,
+
+                                                            success: function(results) {
+                                                                console.log(results)
+                                                                constructorThis.songs.push({
+                                                                    fileName: results.preview_url,
+                                                                    albumCover: albumThis.albumImage
+
+                                                                })
+                                                            }
+                                                        })
+                                                        
+                                                        
+                                                    })
+                                                }
+                                            }
+                                        })
+                                    })
+                                }
+                            }
+                        });
+                    })
+                    
+                }
+            }
+            
+        }
+        $.ajax(requestObject)
+    
     }

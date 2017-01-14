@@ -66,6 +66,10 @@ $(document).ready(function() {
         myJukeBox.showSongs();
         myJukeBox.playSong();
     })
+    searchButton.click(function() {
+
+        myJukeBox.findArtist();
+    })
 
 
 
