@@ -19,8 +19,11 @@ $(document).ready(function() {
     var searchBar = $('#searchBar');
     var searchButton = $('#searchButton');
     var searchResults = $('#searchResults');
+    var finalButton = $('.finalButton');
+    var finalSubmit = $('#finalSubmit');
 
     var myJukeBox = new JukeBox();
+    myJukeBox.showSongs()
 
     middleButton.click(function() {
         myJukeBox.NextorPreviousSong(0); 
@@ -70,7 +73,5 @@ $(document).ready(function() {
 
         myJukeBox.findArtist();
     })
-
-
 
 });

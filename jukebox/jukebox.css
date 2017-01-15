@@ -24,7 +24,7 @@ img {
 }
 #leftMenue {
     width: 150px;
-    height: 700px;
+    height: 900px;
     position: absolute;
     margin-top: 15px;
     margin-left:15px;
@@ -90,4 +90,28 @@ img {
 #searchResults {
     width: 100px;
     height: 400px;
+}
+.listofButtons {
+    background-color: lightblue;
+    width: 150px;
+    margin-top: 10px;
+
+}
+#searchBar {
+    width: 145px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#addSongTitle {
+    width: 145px;
+    height: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: silver;
+}
+#finalSubmit {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 25px;
+    display: none;
 }
