@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     var scrollLeft = $('#scrollLeft');
     var leftButton = $('#leftButton');
     var middleButton = $('#middleButton');
@@ -21,9 +22,14 @@ $(document).ready(function() {
     var searchResults = $('#searchResults');
     var finalButton = $('.finalButton');
     var finalSubmit = $('#finalSubmit');
+    var newPlayListButton = $('#newPlayListButton');
 
     var myJukeBox = new JukeBox();
-    myJukeBox.showSongs()
+    myJukeBox.showSongs();
+    myJukeBox.showPlayLists();
+    myJukeBox.loadPlayList();
+    myJukeBox.savingPlayLists();
+    
 
     middleButton.click(function() {
         myJukeBox.NextorPreviousSong(0); 
@@ -70,8 +76,19 @@ $(document).ready(function() {
         myJukeBox.playSong();
     })
     searchButton.click(function() {
-
-        myJukeBox.findArtist();
+        if (searchBar.val() != '') {
+            myJukeBox.findArtist();
+        }
+    })
+    newPlayListButton.click(function() {
+        myJukeBox.updatePlayList();
+        myJukeBox.loadPlayList();
+        myJukeBox.savingPlayLists();
+    })
+    finalSubmit.click(function() {
+        myJukeBox.addingMoreSongs();
+        myJukeBox.showSongs();
+        
     })
 
 });

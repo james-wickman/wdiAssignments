@@ -115,3 +115,20 @@ img {
     margin-left: 25px;
     display: none;
 }
+#newPlayListInput {
+    width: 145px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#playListTitle {
+    height: 10px;
+    color: darkturquoise;
+}
+#addPlayLists {
+    height: 0px;
+    margin-top: 0px;
+    color: lightgrey;
+}
+#addToPlayList {
+    margin-top: 20px;
+}
