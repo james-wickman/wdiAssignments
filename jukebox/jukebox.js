@@ -23,6 +23,9 @@ $(document).ready(function() {
     var finalButton = $('.finalButton');
     var finalSubmit = $('#finalSubmit');
     var newPlayListButton = $('#newPlayListButton');
+    var allPlayListButtons = $('#allPlayListButtons');
+    var allPlayListButtonsX = $('#allPlayListButtonsX');
+    var addToPlayList = $('#addToPlayList');
 
     var myJukeBox = new JukeBox();
     myJukeBox.showSongs();
@@ -90,5 +93,10 @@ $(document).ready(function() {
         myJukeBox.showSongs();
         
     })
-
+    $(addToPlayList).click(function() {
+        myJukeBox.updatePlayList();
+        myJukeBox.loadPlayList();
+        myJukeBox.savingPlayLists();
+        myJukeBox.showSongs();
+    });
 });

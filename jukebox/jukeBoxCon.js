@@ -32,7 +32,7 @@
         this.currentPlayList = 'startingPlayList';
         this.startingPlayList = localStorage.getItem(this.allPlayLists);
         this.storedPlayLists = localStorage.getItem('storedPlayLists');
-        if (this.startingPlayList == null){
+        if (this.startingPlayList == null && this.selectedPlayList == 0){
             this.songs = [{
                 fileName: 'hypnotic.mp3',
                 albumCover: 'https://tse4.mm.bing.net/th?id=OIP.M7f8f048f359e9247568babd3f1082d50o0&pid=15.1'
@@ -70,12 +70,26 @@
     JukeBox.prototype.loadPlayList = function() {
         var infoButtons = '';
         this.addToPlayList.html('');
+        var baseThis = this;
         for (var i = 0; i < this.playList.length; i ++) {
-            infoButtons = $('<button class="allPlayListButtons" id="allPlayLists">' + this.playList[i] + '</button><button>X</button><br>')
+            infoButtons = $('<br><button class="allPlayListButtons" id="' + i + '">' + this.playList[i] + '</button>')
+            infoButtonsX = $('<button class="allPlayListButtonsX" id="' + i + '">X</button>')
             this.addToPlayList.append(infoButtons);
-            // infoButtons.click(function() {
-
-            // })
+            if (i > 0) {
+            this.addToPlayList.append(infoButtonsX)
+            }
+            infoButtons.click(function() {
+                // baseThis.songs = [];
+                console.log('yell');
+                baseThis.selectedPlayList = this.id;
+                
+            })
+            infoButtonsX.click(function() {
+                baseThis.playList.splice(this.id, 1);
+                // localStorage.clear(this)
+                
+            })
+            this.newPlayListInput.val('');
         }
         $('.allPlayListButtons').css({
 
