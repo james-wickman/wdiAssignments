@@ -32,6 +32,9 @@
         this.currentPlayList = 'startingPlayList';
         this.startingPlayList = localStorage.getItem(this.allPlayLists);
         this.storedPlayLists = localStorage.getItem('storedPlayLists');
+        if (this.storedPlayLists != null && this.storedPlayLists.length > 1) {
+            this.playList = JSON.parse(this.storedPlayLists)
+        }
         if (this.startingPlayList == null && this.selectedPlayList == 0){
             this.songs = [{
                 fileName: 'hypnotic.mp3',
@@ -63,9 +66,10 @@
     }
     JukeBox.prototype.showPlayLists = function() {
         var firstThis = this;
-        if (localStorage.getItem('storedPlayLists') != null) {
-            this.playList = JSON.parse(this.storedPlayLists)
-        } 
+        // if (localStorage.getItem('storedPlayLists') != null) {
+            
+        //     this.playList = this.storedPlayLists
+        // } 
     }
     JukeBox.prototype.loadPlayList = function() {
         var infoButtons = '';
