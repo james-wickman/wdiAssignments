@@ -1,0 +1,18 @@
+@import 'partials/variables';
+@import 'partials/navigation';
+
+
+
+
+
+@mixin background($color, $opacity) {
+  background-color: $color;
+  opacity: $opacity;
+}
+.box {
+  @include background(black, 0.4)
+}
+.alert {
+  @extend .box;
+  color: red;
+}

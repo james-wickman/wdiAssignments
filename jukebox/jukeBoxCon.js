@@ -55,6 +55,7 @@
                 fileName: 'thicker.mp3',
                 albumCover: 'http://cdn4.unpopularlyrics.com/wp-content/uploads/2014/06/kflay-life-as-a-dog2014.jpg'
             }];
+            console.log('filled')
         }
         else {
             this.songs = JSON.parse(this.startingPlayList);
@@ -84,12 +85,24 @@
             }
             infoButtons.click(function() {
                 // baseThis.songs = [];
-                console.log('yell');
+                
                 baseThis.selectedPlayList = this.id;
+                baseThis.allPlayLists = baseThis.playList[baseThis.selectedPlayList];
+                if (localStorage.getItem(baseThis.allPlayLists) != null) {
+                    baseThis.songs = JSON.parse(localStorage.getItem(baseThis.allPlayLists));
+                }
+                baseThis.songNumber = 0;
+                console.log(this.id)
+                console.log(baseThis.playList);
+                console.log(baseThis.allPlayLists)
                 
             })
             infoButtonsX.click(function() {
+                var currentDelete = this.id;
+                console.log((baseThis.playList[currentDelete]))
+                localStorage.removeItem(baseThis.playList[currentDelete])
                 baseThis.playList.splice(this.id, 1);
+                
                 // localStorage.clear(this)
                 
             })
@@ -117,26 +130,19 @@
         this.songPlace.play();
     }
     JukeBox.prototype.showSongs = function() {
-        this.previousSong = this.songNumber - 1;
-        this.nextSong = this.songNumber + 1;
-        this.song = this.songs[this.songNumber + 1];
-        if (this.previousSong <= -1) {
+        this.allPlayLists = this.playList[this.selectedPlayList];
+        this.songs = JSON.parse(localStorage.getItem(this.allPlayLists));
+        if (this.songs == null) {
             this.leftButton.attr('class', '');
             this.leftPhoto.attr('src', '');
             this.leftButton.css({
                 "height": '0px'
             })
-        }
-        else {
-        this.leftButton.attr('class', this.previousSong);
-        this.leftPhoto.attr('src', this.songs[this.previousSong].albumCover);
-        }
-        if (this.nextSong >= this.songs.length) {
-            this.nextSong = 0;
-        }
-        this.middleButton.attr('class', this.songNumber);
-        this.middlePhoto.attr('src', this.songs[this.songNumber].albumCover);
-        if (this.songNumber >= this.songs.length - 1){
+            this.middleButton.attr('class', '');
+            this.middlePhoto.attr('src', '');
+            this.middleButton.css({
+                "height": '0px'
+            })
             this.rightButton.attr('class', '');
             this.rightPhoto.attr('src', '');
             this.rightButton.css({
@@ -144,8 +150,36 @@
             })
         }
         else {
-            this.rightButton.attr('class', this.nextSong);
-            this.rightPhoto.attr('src', this.songs[this.nextSong].albumCover); 
+            this.previousSong = this.songNumber - 1;
+            this.nextSong = this.songNumber + 1;
+            this.song = this.songs[this.songNumber + 1];
+            if (this.previousSong <= -1) {
+                this.leftButton.attr('class', '');
+                this.leftPhoto.attr('src', '');
+                this.leftButton.css({
+                    "height": '0px'
+                })
+            }
+            else {
+            this.leftButton.attr('class', this.previousSong);
+            this.leftPhoto.attr('src', this.songs[this.previousSong].albumCover);
+            }
+            if (this.nextSong >= this.songs.length) {
+                this.nextSong = 0;
+            }
+            this.middleButton.attr('class', this.songNumber);
+            this.middlePhoto.attr('src', this.songs[this.songNumber].albumCover);
+            if (this.songNumber >= this.songs.length - 1){
+                this.rightButton.attr('class', '');
+                this.rightPhoto.attr('src', '');
+                this.rightButton.css({
+                    "height": '0px'
+                })
+            }
+            else {
+                this.rightButton.attr('class', this.nextSong);
+                this.rightPhoto.attr('src', this.songs[this.nextSong].albumCover); 
+            }
         }
     }
     JukeBox.prototype.NextorPreviousSong = function(whereTo) {
@@ -160,16 +194,29 @@
     }
     JukeBox.prototype.addingMoreSongs = function() {
         this.mySongsString = '';
+        this.allPlayLists = this.playList[this.selectedPlayList];
         if (this.addingMusic != null && this.addingArt != null) {
-            this.songs.push({
+            if (this.songs == null) {
+                this.songs = [{
                 'fileName': this.addingMusic,
                 'albumCover': this.addingArt
-            })
+                }]
+            }
+            else {
+                this.songs.push({
+                    'fileName': this.addingMusic,
+                    'albumCover': this.addingArt
+                })
+            }
             this.mySongsString = JSON.stringify(this.songs)
-            localStorage.setItem(this.currentPlayList, this.mySongsString)
-            console.log(localStorage.getItem(this.currentPlayList))
+            localStorage.setItem(this.allPlayLists, this.mySongsString)
+            console.log(localStorage.getItem(this.allPlayLists))
         }
 
+    }
+    JukeBox.prototype.startingFirstList = function() {
+        this.mySongsString = JSON.stringify(this.songs)
+        localStorage.setItem(this.allPlayLists, this.mySongsString)
     }
 
     JukeBox.prototype.findArtist = function() {

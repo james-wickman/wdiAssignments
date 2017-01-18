@@ -28,10 +28,12 @@ $(document).ready(function() {
     var addToPlayList = $('#addToPlayList');
 
     var myJukeBox = new JukeBox();
+    myJukeBox.startingFirstList();
+    myJukeBox.savingPlayLists();
     myJukeBox.showSongs();
     myJukeBox.showPlayLists();
     myJukeBox.loadPlayList();
-    myJukeBox.savingPlayLists();
+    
     
 
     middleButton.click(function() {

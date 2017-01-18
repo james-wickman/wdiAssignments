@@ -1,0 +1,28 @@
+ul.navigation {
+  list-style: none; }
+
+.navigation li {
+  float: left;
+  padding: 5px;
+  line-height: 25px;
+  min-width: 120px;
+  background-color: white;
+  cursor: pointer;
+  text-align: center; }
+  .navigation li:hover {
+    background-color: #eee; }
+  .navigation li.active {
+    background-color: #eee; }
+.navigation a {
+  text-decoration: none;
+  color: black;
+  font-size: 10px; }
+
+.box, .alert {
+  background-color: black;
+  opacity: 0.4; }
+
+.alert {
+  color: red; }
+
+/*# sourceMappingURL=styles.css.map */
