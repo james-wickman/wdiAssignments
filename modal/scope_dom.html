@@ -1,0 +1,56 @@
+<!DOCTYPEHTML>
+<html>
+	<head>
+		<title>My title</title>
+		<link rel="stylesheet" type="text/css" href="scope_dom.css">
+	</head>
+	<body>
+
+	<h1 id="title">This is my H1</h1>
+
+	<div id="main-section">
+		<h1>Books</h1>
+	</div>
+	<button type="button" onClick=openAdd() id="open">Add a Book</button>
+	<modal id="addingBook">
+		
+			<button onClick=hideAdd() id="close">x</button><br>
+			Name:
+			<input type="text" id="name1">
+			Author:
+			<input type="text" id="author1"><br>
+			Description:
+			<input type="text" id='description1'>
+			<button onClick=addTooArray() id="subButton">Submit</button>
+	</modal>
+	<hr>
+
+<!-- 	<h1 class="red">About Me</h1>
+		<label>Name: <span id="name"></span></label><br />
+		<label class='big bigger'>Favorite Food: <span id="food"></span></label> <br />
+		<label>Favorite Color: <span id="season"></span></label> <br />
+		
+		<hr>
+
+		<div class="big">
+			<h1 class="bigger">Projects</h1>
+		</div>
+		<h2 class="red">wdi 100</h2>
+
+		<p class="big">Lorem ipsum dolor sit amet, vix ne modo porro, id has feugait epicuri. Impedit repudiare persequeris vis ad, tantas omnium cum at. Vivendum definitionem id mei, ridens deserunt te mea, et eam ocurreret definiebas interesset. Quo no tincidunt persecuti conceptam, has elitr quaeque incorrupte te, ea augue consetetur contentiones eam. Id denique fastidii has.</p>
+
+		<h2 class = "red">Angular</h2>
+		<p>Lorem ipsum dolor sit amet, vix ne modo porro, id has feugait epicuri. Impedit repudiare persequeris vis ad, tantas omnium cum at. Vivendum definitionem id mei, ridens deserunt te mea, et eam ocurreret definiebas interesset. Quo no tincidunt persecuti conceptam, has elitr quaeque incorrupte te, ea augue consetetur contentiones eam. Id denique fastidii has.
+		</p>
+		<h2>MAS</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+ -->
+		<script src="scope_dom.js"></script>
+	</body>
+</html>

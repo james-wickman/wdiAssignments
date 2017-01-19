@@ -1,0 +1,18 @@
+#description1 {
+	height: 30px;
+	width: 300px;
+}
+#addingBook {
+	display: none;
+}
+
+modal {
+    padding: 8px;
+    background-color: white;
+    border: solid black 1px;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+}

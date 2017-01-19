@@ -132,3 +132,51 @@ img {
 #addToPlayList {
     margin-top: 20px;
 }
+
+.clearSongLeft {
+    position: absolute;
+    float: right;
+    left: 225px;
+    top: 180px;
+}
+.clearSongRight {
+    position: absolute;
+    float: right;
+    left: 635px;
+    top: 180px;
+}
+.clearSongMiddle {
+    position: absolute;
+    float: right;
+    left: 430px;
+    top: 180px;
+}
+
+
+.removingLeftSongPopUp {
+    background-color: grey;
+    border: solid black 2px;
+    position: absolute;
+    left: 400px;
+    top: 230px;
+    height: 50px;
+    width: 90px;
+}
+.removingMiddleSongPopUp {
+    background-color: grey;
+    border: solid black 2px;
+    position: absolute;
+    left: 600px;
+    top: 230px;
+    height: 50px;
+    width: 90px;
+}
+.removingRightSongPopUp {
+    background-color: grey;
+    border: solid black 2px;
+    position: absolute;
+    left: 800px;
+    top: 230px;
+    height: 50px;
+    width: 90px;
+}
