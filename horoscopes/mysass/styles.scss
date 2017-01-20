@@ -1,0 +1,146 @@
+$mediumPicHeight:170px;
+$bigPic: 450px;
+$smallPic: 63px;
+$bdayInfoColor: lightblue;
+
+// .mainSigns {
+//     height: $mediumPicHeight;
+//     width: $mediumPicHeight;
+//     margin: 0px;
+
+// }
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: midnightblue;
+}
+.mainSigns {
+    background-color: midnightblue;
+}
+.allSignImg {
+    height: $mediumPicHeight;
+    width: $mediumPicHeight;
+    margin: 0px;
+}
+// .mainSignsButton {
+//     background-color: lightblue;
+//     display: inline-block;
+// }
+
+.modalDiv {
+    background-color: darkgrey;
+    position: absolute;
+    opacity: 0.8;
+
+    height: 100%;
+    width: 100%;
+}
+.modalForPic {
+    background-color: lightskyblue;
+    position: absolute;
+    opacity: 0.9;
+    top: 100px;
+    left: 100px;
+    height: $bigPic;
+    width: $bigPic;
+}
+.modalForPicInfo {
+    background-color: lightskyblue;
+    position: absolute;
+    opacity: 1;
+    top: 500px;
+    left: 100px;
+    height: $mediumPicHeight;
+    width: $bigPic + $mediumPicHeight;
+}
+.modalForCampatibility {
+    background-color: blue;
+    position: absolute;
+    opacity: 1;
+    top: 100px;
+    left: 550px;
+    height: $bigPic;
+    width: $mediumPicHeight;
+}
+
+// .smallSignsButton {
+//     height: $smallPic + 5px;
+//     width: $smallPic + 5px;
+//     margin: 0px;
+// }
+
+.compatibilityImgs {
+    height: $smallPic;
+    width: $smallPic + 6px;
+    margin: 0px;
+}
+.popUpPic {
+    height: $bigPic;
+    width: $bigPic;
+}
+.close {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.bdayInput {
+    background-color: $bdayInfoColor;
+}
+.closeBday {
+    // display: inline-block;
+
+}
+.enterYourB {
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: 30px;
+}
+.monthForm {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.dayForm {
+    position: relative;
+    left:0px;
+}
+.submitBday {
+    position: relative;
+    top:5px;
+}
+
+.enterBdayInfo {
+    background-color: $bdayInfoColor;
+    position: absolute;
+    top: 50px;
+
+    width: 100%
+}
+
+.container {
+    position: absolute;
+    top: 140px;
+    left: 30px;
+}
+.blueBackground {
+    background-color: $bdayInfoColor;
+}
+.containsSignName {
+    background-color: lightskyblue;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    height: $smallPic;
+    width: $bigPic;
+}
+
+.containsCompatabilityHead {
+    background-color: lightskyblue;
+    position: absolute;
+    top:40px;
+    left: 550px;
+    height: $smallPic;
+    width: $mediumPicHeight;
+
+}

@@ -1,0 +1,114 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: midnightblue; }
+
+.mainSigns {
+  background-color: midnightblue; }
+
+.allSignImg {
+  height: 170px;
+  width: 170px;
+  margin: 0px; }
+
+.modalDiv {
+  background-color: darkgrey;
+  position: absolute;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%; }
+
+.modalForPic {
+  background-color: lightskyblue;
+  position: absolute;
+  opacity: 0.9;
+  top: 100px;
+  left: 100px;
+  height: 450px;
+  width: 450px; }
+
+.modalForPicInfo {
+  background-color: lightskyblue;
+  position: absolute;
+  opacity: 1;
+  top: 500px;
+  left: 100px;
+  height: 170px;
+  width: 620px; }
+
+.modalForCampatibility {
+  background-color: blue;
+  position: absolute;
+  opacity: 1;
+  top: 100px;
+  left: 550px;
+  height: 450px;
+  width: 170px; }
+
+.compatibilityImgs {
+  height: 63px;
+  width: 69px;
+  margin: 0px; }
+
+.popUpPic {
+  height: 450px;
+  width: 450px; }
+
+.close {
+  position: absolute;
+  top: 100px;
+  left: 100px; }
+
+.bdayInput {
+  background-color: lightblue; }
+
+.enterYourB {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: 30px; }
+
+.monthForm {
+  position: relative;
+  top: 0px;
+  left: 0px; }
+
+.dayForm {
+  position: relative;
+  left: 0px; }
+
+.submitBday {
+  position: relative;
+  top: 5px; }
+
+.enterBdayInfo {
+  background-color: lightblue;
+  position: absolute;
+  top: 50px;
+  width: 100%; }
+
+.container {
+  position: absolute;
+  top: 140px;
+  left: 30px; }
+
+.blueBackground {
+  background-color: lightblue; }
+
+.containsSignName {
+  background-color: lightskyblue;
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  height: 63px;
+  width: 450px; }
+
+.containsCompatabilityHead {
+  background-color: lightskyblue;
+  position: absolute;
+  top: 40px;
+  left: 550px;
+  height: 63px;
+  width: 170px; }
+
+/*# sourceMappingURL=styles.css.map */
