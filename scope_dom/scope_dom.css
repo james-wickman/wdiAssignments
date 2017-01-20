@@ -1,0 +1,17 @@
+button {
+	display: block;
+}
+#modal {
+	position: relative;
+	width: 180px;
+	height: 180px;
+	background: lightgrey;
+	border: 2px solid grey;
+	display: none;
+}
+#modal .modal_x {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+}

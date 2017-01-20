@@ -1,0 +1,29 @@
+<!DOCTYPEHTML>
+<html>
+	<head>
+		<title>Asignment</title>
+		<link rel="stylesheet" href="scope_dom.css" />
+	</head>
+	<body>
+		<button class="login_button" onClick="open_modal()">Login</button>
+		<div id="modal">
+			<button class="modal_x" onClick="close_modal()">X</button>
+			<form>
+				<input type="text" placeholder="Email" name="email" id="email_1"/>
+				<input type="text" placeholder="Username" name="username" />
+				<input type="password" placeholder="Password" name="password_1" />
+				<input type="password" placeholder="re-type password" name="password_2" />
+				<button type="button" onClick="dosubmit()">Submit</button>
+			</form>
+
+
+<!--		<div id="time" style="display:none;">
+			I AM:<input type="text" value="" onchange="listen_to_music(this.value)" />
+			<button id="button_1">Exit input</button>
+			</div>
+-->
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="scope_dom.js"></script>
+	</body>
+</html>
+
