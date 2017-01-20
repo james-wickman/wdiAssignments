@@ -1,0 +1,59 @@
+@keyframes rotate360 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+#hand_hour, #hour {
+    animation: 43200s rotate360 infinite linear;
+}
+#hand_minute, #minute {
+    animation: 3600s rotate360 infinite linear;
+}
+#hand_second, #second {
+    animation: 60s rotate360 infinite linear;
+}
+#hour, #minute, #second {
+    animation-direction:reverse;
+}
+
+html {
+    background-color: lightblue;
+}
+div {
+    display: block;
+    width: 250px;
+}
+span #prime {
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+}
+#clockFace {
+    fill: lightpink;
+}
+#hand_hour_container, #hand_minute_container, #hand_second_container, #hand_hour, #hand_minute, #hand_second {
+  position:absolute;
+  top:0;
+  left:0;
+  display:inline-block;
+}
+#hand_hour_container, #hand_hour {
+  padding:14%;
+  width:72%;
+  height:72%;
+}
+#hand_minute_container, #hand_minute {
+  padding:25%;
+  width:50%;
+  height:50%;
+}
+#hand_second_container, #hand_second {
+  padding:35%;
+  width:30%;
+  height:30%;
+}
+
+#hour_container, #minute_container, #second_container, #hour, #minute, #second {
+  display:inline-block;
+  vertical-align:middle;
+}
