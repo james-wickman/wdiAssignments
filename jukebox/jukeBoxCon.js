@@ -78,7 +78,6 @@ function JukeBox() {
 }
 JukeBox.prototype.savingPlayLists = function() {
     localStorage.setItem('storedPlayLists', JSON.stringify(this.playList));
-    console.log(this.storedPlayLists);
 }
 JukeBox.prototype.showPlayLists = function() {
     var firstThis = this;
@@ -107,14 +106,10 @@ JukeBox.prototype.loadPlayList = function() {
                 baseThis.songs = JSON.parse(localStorage.getItem(baseThis.allPlayLists));
             }
             baseThis.songNumber = 0;
-            console.log(this.id)
-            console.log(baseThis.playList);
-            console.log(baseThis.allPlayLists)
             
         })
         infoButtonsX.click(function() {
             var currentDelete = this.id;
-            console.log((baseThis.playList[currentDelete]))
             localStorage.removeItem(baseThis.playList[currentDelete])
             baseThis.playList.splice(this.id, 1);
             
@@ -134,7 +129,6 @@ JukeBox.prototype.updatePlayList = function() {
     if (this.newPlayListInput.val() != '') {
         this.playList.push(this.newPlayListInput.val());
     }
-    console.log(this.newPlayListInput.val())
 }
 
 JukeBox.prototype.playSong = function() {
@@ -231,7 +225,7 @@ JukeBox.prototype.addingMoreSongs = function() {
         }
         this.mySongsString = JSON.stringify(this.songs)
         localStorage.setItem(this.allPlayLists, this.mySongsString)
-        console.log(localStorage.getItem(this.allPlayLists))
+        // console.log(localStorage.getItem(this.allPlayLists))
     }
 
 }
@@ -384,8 +378,7 @@ JukeBox.prototype.removingSongs = function(num) {
     
     this.allPlayLists = this.playList[this.selectedPlayList];
     this.removeFromPlayList = this.startingPlayList;
-    console.log(this.allPlayLists);
-    console.log(this.songs);
+    
 
     this.songs.splice(this.removedSong, 1);
     this.mySongsString = JSON.stringify(this.songs)

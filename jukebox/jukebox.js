@@ -35,6 +35,8 @@ $(document).ready(function() {
     var takeOffLeftSong = $('.takeOffLeftSong');
     var takeOffMiddleSong = $('.takeOffMiddleSong');
     var takeOffRightSong = $('.takeOffRightSong');
+    var submitInput = $('.subInput');
+    var inputButton = $('.inputButton');
 
     var myJukeBox = new JukeBox();
     myJukeBox.startingFirstList();
@@ -171,5 +173,8 @@ $(document).ready(function() {
         myJukeBox.showSongs();
     })
 
+    submitInput.click(function() {
+        console.log(inputButton["0"].value);
+    })
 
 });

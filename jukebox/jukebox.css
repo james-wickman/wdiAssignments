@@ -180,3 +180,23 @@ img {
     height: 50px;
     width: 90px;
 }
+.headingForFile {
+    height: 50px;
+    background-color: lightblue;
+}
+.headTitle {
+    display: inline-block;
+
+
+}
+.headText {
+    display: inline-block;
+    margin-left: 60px;
+}
+.inputButton {
+    display: inline-block;
+    margin-left: 30px;
+}
+.submitInput {
+    display: inline-block;
+}
