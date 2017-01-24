@@ -1,0 +1,63 @@
+html {
+	background-color: lightblue;
+}
+body {
+
+}
+header {
+
+}
+footer {
+	font-size: 20px;
+	position: fixed;
+	display: block;
+	bottom: 0;
+	width: 100%;
+	height: 78px;
+	background: pink;
+	opacity: 0.40;
+	text-align: center;
+	margin: 0;
+}
+footer:hover {
+	opacity: 0.95;
+}
+
+.twitter_pic {
+	height: 42px;
+	margin-top: 10px;
+	margin-bottom: 4px;
+	margin-left: 20px;
+}
+
+.linkedin_pic {
+	height: 50px;
+	margin-top: 10px;
+	margin-left: 20px;
+
+}
+
+.facebook_pic {
+	height: 45px;
+	margin-top: 10px;
+	margin-bottom: 2px;
+	margin-left: 20px;
+}
+
+.youtube_pic {
+	height: 45px;
+	margin-top: 10px;
+	margin-bottom: 3px;
+	margin-left: 25px;
+}
+
+.instagram_pic {
+	height: 45px;
+	margin-top: 10px;
+	margin-bottom: 3px;
+	margin-left: 25px;
+}
+.foot {
+	font-size: 12px;
+	margin: 0;
+}
