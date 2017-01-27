@@ -3,52 +3,64 @@
     <head>
         <title>JUKE BOX</title>
         <link rel="stylesheet" href="jukebox.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
-        <!--<div class='headingForFile'>
-            <h2 class='headTitle'>The JukeBox</h2>
-            <h4 class='headText'>Upload Your Own Music</h4>
-            <input class='inputButton' type="file" name="datafile" size="40">
-            <button class='subInput'>Submit</button>
-        </div>-->
-        <div id="menue">
-            <button id='scrollLeft'><</button>
-            <button class='first' id='leftButton' ><img id='leftPhoto' src=''/><button class="clearSongLeft">X</button></button>
-            <button class='second' id='middleButton' ><img id="middlePhoto" src=""/><button class="clearSongMiddle">X</button></button>
-            <button class='third' id='rightButton' ><img id="rightPhoto" src='' /><button class="clearSongRight">X</button></button>
-            <button id='scrollRight'>></button>
-            
+        <div class='container'>
+            <div class='headingForFile row'>
+                <h3 class='headTitle col-lg-4'>The JukeBox</h3>
+                <h3 class='headStation col-lg-4'>Current Station</h3>
+                <h3 class='headUserName col-lg-4'>Your username</h3>
+                
+            </div>
         </div>
-        <div id='leftMenue'>
-            <h4 id='addSongTitle' >Add Song To Playlist</h4 id='addSongTitle' >
-            <input placeholder='Search Artist' id='searchBar'></input>
-            <button id='searchButton'>Search</button><hr>
-            <div id='playListInfo'>
-                <h4 id='addPlayLists'>Add New Playlist</h4>
-                <input placeholder='Add New Playlist' id='newPlayListInput'></input>
-                <button id='newPlayListButton'>Add</button><hr>
-                <h2 id='playListTitle'>Playlists</h2>
-                <div id='addToPlayList'>
+        <div class='container'>
+            <div class='controlButtons row'>
+                    <button class='col-lg-1' id='displaySongList'>Songs</button>
+                    <button class='col-lg-2' id='volumeDown'>Volume Down</button>
+                    <button class='col-lg-2' id='volumeUp'>Volume Up</button>
+                    <button class='col-lg-1' id='pause'>||</button>
+                    <button class='col-lg-1' id='play'>[></button>
+                    <button class='col-lg-1' id='skip'>>>|</button>
+                    <button class='col-lg-1' id='displayPlayList'>Playlists</button>
+            </div>
+        </div>
+        <div class='container'>
+            <div id="menue">
+                <button id='scrollLeft'><</button>
+                <button class='first' id='leftButton' ><img id='leftPhoto' src=''/><button class="clearSongLeft">X</button></button>
+                <button class='second' id='middleButton' ><img id="middlePhoto" src=""/><button class="clearSongMiddle">X</button></button>
+                <button class='third' id='rightButton' ><img id="rightPhoto" src='' /><button class="clearSongRight">X</button></button>
+                <button id='scrollRight'>></button>
+                
+            </div>
+            <div id='leftMenue'>
+                <h4 id='addSongTitle' >Add Song To Playlist</h4 id='addSongTitle' >
+                <input placeholder='Search Artist' id='searchBar'></input>
+                <button id='searchButton'>Search</button><hr>
+                
+                <button id='finalSubmit'>Add Song</button>
+                <div id='searchResults'>
+                </div>
+                
+            </div>
+            <div id='currentSong'>
+                
+                
+            </div> 
+            <div class=rightMenue>
+                <div id='playListInfo'>
+                    <h4 id='addPlayLists'>Add New Playlist</h4>
+                    <input placeholder='Add New Playlist' id='newPlayListInput'></input>
+                    <button id='newPlayListButton'>Add</button><hr>
+                    <h2 id='playListTitle'>Playlists</h2>
+                    <div id='addToPlayList'>
+                    </div>
                 </div>
             </div>
-            <button id='finalSubmit'>Add Song</button>
-            <div id='searchResults'>
-            </div>
-            
         </div>
-        <div id='currentSong'>
-            
-            
-        </div> 
-        <div id="buttons">
-            <button id='volumeDown'>Volume Down</button>
-            <button id='volumeUp'>Volume Up</button>
-            <button id='pause'>||</button>
-            <button id='play'>[></button>
-            <button id='skip'>>>|</button>
-            
-        </div>   
-        <modal class="removingLeftSongPopUp">
+         
+        <!-- <modal class="removingLeftSongPopUp">
             <button class='takeOffLeftSong'>Remove Song</button>
             <button class='cancling'>Cancel</button>
         </modal>
@@ -59,7 +71,7 @@
         <modal class="removingRightSongPopUp">
             <button class='takeOffRightSong'>Remove Song</button>
             <button class='cancling'>Cancel</button>
-        </modal>
+        </modal> -->
  
         <div id='audioFiles'>
         <audio src="hypnotic.mp3" id="songPlace">

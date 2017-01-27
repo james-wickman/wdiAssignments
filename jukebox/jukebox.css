@@ -26,7 +26,7 @@ img {
     width: 150px;
     height: 900px;
     position: absolute;
-    margin-top: 15px;
+    margin-top: 0px;
     margin-left:15px;
     border: 1px solid black;
     background-color:darkslategrey;
@@ -201,3 +201,36 @@ img {
 .submitInput {
     display: inline-block;
 }
+.controlButtons {
+    background-color: green;
+    height: 50px;
+    width: 100%;
+}
+.headingForFile h3{
+    display: inline-block;
+    
+}
+.rightMenue {
+    width: 150px;
+    height: 900px;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 915px;
+    border: 1px solid black;
+    background-color:darkslategrey;
+}
+.headTitle {
+    text-align: left;
+}
+.headStation {
+    text-align: center;
+}
+.headUserName {
+    text-align: right;
+}
+
+
+
+
+
+

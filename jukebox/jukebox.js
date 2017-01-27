@@ -79,6 +79,8 @@ $(document).ready(function() {
 
     })
     play.click(function() {
+        myJukeBox.NextorPreviousSong(0);
+        myJukeBox.playSong();
         songPlace.play();
     })
     pause.click(function() {

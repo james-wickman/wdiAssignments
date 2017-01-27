@@ -1,0 +1,145 @@
+.background {
+	background-size: 1400px;
+}
+body {
+	background-color: lightblue;
+}
+
+.top_nav {
+	background-color: lightblue;
+
+}
+.signed-in-as {
+	font-size: 17px;
+	float: right;
+	margin-right: 10px;
+}
+
+.companyName {
+	height: 15px;
+	text-align: center;
+	text-shadow: 2px 2px #ff0000;
+	color: white;
+	margin-bottom: 25px;
+	 
+}
+
+img {
+	height: 140px;
+	cursor: pointer;
+	margin: 10px;
+}
+
+
+.signin_form {
+	height: 260px;
+	width: 300px;
+	background-color: #e8ebef;
+
+	text-align: center;
+	margin-left: 50px;
+
+}
+
+.inside_signin {
+	width: 240px;
+	height: 250px;
+	margin: 0 auto;
+}
+.signup_form {
+	height: 300px;
+	width: 300px;
+	background-color: #e8ebef;
+
+	text-align: center;
+	margin-left: 50px;
+}
+
+.inside_signup {
+	width: 250px;
+	margin: 0 auto;
+}
+
+.create_new_acct {
+	height: 26px;
+	background-color: #f9f9f9;
+}
+
+.inventory_pics {
+
+	width: 80%;
+	height: 900px;
+	margin: 0 auto;
+	background-color: lightgrey;
+	opacity: 0.8;
+}
+
+.img_inventory {
+	display: inline-block;
+}
+.contact_button {
+	float: right;
+}
+
+.contact_form {
+	background-color: #f9f9f9;
+	height: 400px;
+	width: 500px;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+.subject_place {
+	border: 1px solid grey;
+	width: 442px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.textarea_box {
+
+	margin: 0 auto;
+    display: block;
+}
+.contact_form h1 {
+	margin-top: 30px;
+	text-align: center;
+}
+.submit_button_contact {
+	float: right;
+	margin-top: 10px;
+	margin-right: 29px;
+}
+
+.welcome_new_user {
+	text-shadow: lightblue;
+}
+
+.inventory_head {
+	text-align: center;
+}
+
+.pic_text {
+	text-align: center;
+}
+.companySlogan {
+	text-align: center;
+    color: white;
+    text-shadow: 1px 1px blue;
+}
+
+
+.nav-tabs>li.active>a {
+	background-color: lightblue;
+}
+
+
+
+
+
+
+
+
+
+
+

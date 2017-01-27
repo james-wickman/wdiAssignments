@@ -1,0 +1,156 @@
+
+
+/* 
+  persistent animations
+*/
+@keyframes rotate360 {
+  to { transform: rotate(360deg); }
+}
+#hand_hour, #hour {
+  animation: 43200s rotate360 infinite linear;
+}
+#hand_minute, #minute {
+  animation: 3600s rotate360 infinite linear;
+}
+#hand_second, #second {
+  animation: 60s rotate360 infinite linear;
+}
+#hour, #minute, #second {
+  animation-direction: reverse;
+}
+
+
+/*
+  reset
+*/
+html,body,h1,h2,h3,h4,h5,h6 {
+  margin:0;
+  font-weight:normal;
+}
+html, body {
+  height:100%;
+}
+body {
+  background:#000;
+  font-family:Verdana, Trebuchet, sans-serif;
+}
+
+/*
+  clock container
+  -
+  to set the height: do it on .clock_face
+  to set the width: let img be height:100% - it is a square image, so, it will make the width be the same as the height
+*/
+.clock_face {
+  position:relative;
+  display:inline-block;
+  border-radius: 50%;
+  height:100%;
+  overflow:hidden;
+  background:#ccc;
+}
+.clock_face img {
+  display:block;
+  height:100%;
+}
+
+/*
+  children
+*/
+#hand_hour_container, #hand_minute_container, #hand_second_container, #hand_hour, #hand_minute, #hand_second {
+  position:absolute;
+  top:0;
+  left:0;
+  display:inline-block;
+}
+#hand_hour_container, #hand_hour {
+  padding:14%;
+  width:72%;
+  height:72%;
+}
+#hand_minute_container, #hand_minute {
+  padding:25%;
+  width:50%;
+  height:50%;
+}
+#hand_second_container, #hand_second {
+  padding:35%;
+  width:30%;
+  height:30%;
+}
+
+/*
+  values
+*/
+#hour_container, #minute_container, #second_container, #hour, #minute, #second {
+  display:inline-block;
+  vertical-align:middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@keyframes myFunc {
+  to { transform: rotate(360deg); }
+}
+@keyframes margin_shade {
+  to { margin: 100px; }
+}
+
+
+
+#seconds {
+	display: inline-block;
+
+}
+
+#clock_body {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	display: block;
+	border: solid 2px black;
+	border-radius: 50%;
+	overflow: none;
+	margin: 100px;
+}
+
+
+#second_hand {
+	animation: 60s myFunc infinite linear;
+	display: block;
+	position: absolute;
+	  line-height:150px;
+  height: 150px;
+  width: 150px;
+
+
+}
+#minute_hand {
+	 animation: 3600s myFunc infinite linear;
+	 display: block;
+	 position: absolute;
+	   line-height:150px;
+  height: 150px;
+  width: 150px;
+
+}
+#hour_hand {
+	 animation: 43200s myFunc infinite linear;
+	 display: block;
+	 position: absolute;
+	   line-height:150px;
+  height: 150px;
+  width: 150px;
+
+}*/

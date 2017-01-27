@@ -1,0 +1,21 @@
+
+<h1>Home</h1>
+<ul>
+	<li><a href='/sign-up'>Sign Up</a></li>
+	<li><a href='/login'>Log in</a></li>
+	<li><a href="/user">User Page</a></li>
+</ul>
+<img src="images/bobcat.jpeg">
+<ul>
+	<% names = ['bob', 'carl', 'tom', 'tim'] %>
+
+	<% names.each do |names_list| %>
+
+		<li>
+			<a href="/employes/<%=names_list%>">
+			<strong><%= names_list %></strong>
+			<a>
+		</li>
+
+	<% end %>
+</ul>
