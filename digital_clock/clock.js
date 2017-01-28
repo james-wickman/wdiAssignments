@@ -91,7 +91,7 @@
 var x = 1;
 while (x <= 24) {
 	var whatever_hour_it_is_now = (new Date()).getHours();
-	var hour1 = document.getElementById("hours");
+	var hour1 = document.getElementById("hour");
 
 	var selected_attr = "";
 	if (x== whatever_hour_it_is_now ) {
@@ -121,20 +121,27 @@ function pad(number) {
 		return number;
 	}
 }
+var autoUpdate = function() {
 
-function time() {
-	var x = (new Date()).getHours() % 12;
-	var y = (new Date()).getMinutes();
-	var c = (new Date()).getSeconds();
+	var d = new Date();
+	var hours = d.getHours();
+	var minutes = d.getMinutes();
+	var seconds = d.getSeconds();
 
-	document.getElementById("hours1").innerHTML = pad(x) + " :";
-	document.getElementById("minutes").innerHTML = pad(y) + " :";
-	document.getElementById("seconds").innerHTML = pad(c);
+	hour.innerHTML = pad(hours % 12);
+	minute.innerHTML = pad(minutes);
+	second.innerHTML = pad(seconds);
 }
-time()
+	var d = new Date();
+	var hours = d.getHours();
+	var minutes = d.getMinutes();
+	var seconds = d.getSeconds();
+	hour.innerHTML = pad(hours % 12);
+	minute.innerHTML = pad(minutes);
+	second.innerHTML = pad(seconds);
 
 
 // setInterval
-setInterval(time, 1000);
+setInterval(autoUpdate, 1000);
 
 
