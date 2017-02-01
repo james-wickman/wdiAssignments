@@ -1,0 +1,8 @@
+<% @users.each do |user| %>
+	<div class="user">
+		Name: <%= user.first_name %> <%= user.last_name %>
+		Email: <%= user.email %>
+		Awesome: <%= user.awesome %>
+	</div>
+	<hr>
+<% end %>

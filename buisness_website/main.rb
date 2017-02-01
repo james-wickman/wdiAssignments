@@ -25,7 +25,6 @@ get '/signin' do
 
 
 	erb :signin 
-	
 end 
 
 get '/sign_up' do 
@@ -51,8 +50,6 @@ get '/inventory' do
 		redirect to '/inventory/signedin'
 	end
 end
-
-
 
 post '/sign_up/submit' do 
 	p params.inspect
@@ -142,7 +139,6 @@ post '/contact_us/submit' do
 	puts response.body
 
 	redirect to '/'
-
 end
 
 

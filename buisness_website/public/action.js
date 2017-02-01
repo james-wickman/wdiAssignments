@@ -47,17 +47,12 @@ var pics_array = [
 
 ]
 
-
-
-
 function creatingPics() {
 	links_div.html("<h1 class='inventory_head'>What are you looking for?</h1>")
 	for (var i = 0; i < pics_array.length; i++) {
 		links_div.append("<a href='/contact_us?car_id=" + pics_array[i].txt + "' class='img_inventory col-lg-4 col-md-4 col-sm-6'><img src='" + pics_array[i].src + "'> <h4 class='pic_text'>" + pics_array[i].txt + "</h4></a>")
 	}
 }
-
-
 creatingPics();
 
 

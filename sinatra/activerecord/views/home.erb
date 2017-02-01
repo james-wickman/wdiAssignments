@@ -1,0 +1,17 @@
+<h1>hello</h1>
+
+<div class="posts">
+
+	<% @users.posts.each do |post| %>
+		<p><%= post.content %> </p>
+		<% post.comments.each do |comment| %>
+			<p><%= comment.content %></p>
+		<% end %>
+
+	<% end %>
+
+</div>
+
+
+
+
