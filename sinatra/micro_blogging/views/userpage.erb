@@ -3,7 +3,37 @@
 <a href='/log_out'>Logout</a>
 
 
-<h2>Welcome <%= @user.first_name %> <%= @user.last_name %>
+<h2><%= @user.first_name %> <%= @user.last_name %>
 </h2>
+
+<a href='/edit_user'>Edit Profile</a>
+<a href='/blog_post'>Create Post</a>
+
+
+
+<% if @user.ocupation && @user.ocupation != '' %>
+<h3>Ocupation: <%= @user.ocupation %>
+<%end%>
+<% if @user.hobbies && @user.hobbies != '' %>
+<h3>Hobbies: <%= @user.hobbies %>
+<%end%>
+<% if @user.sex && @user.sex != '' %>
+<h3>Sex: <%= @user.sex %>
+<%end%>
+
+<h3> User since <%=@user.date_created %></h3>
+
+
+<div>
+	<% @post.each do |post| %>
+		<div>
+			<%= post.title %>
+			<%= post.date_created %>
+			<%= post.content %>
+		</div>
+	<% end %>
+
+
+</div>
 
 

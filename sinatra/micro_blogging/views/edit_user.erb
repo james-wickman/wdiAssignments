@@ -1,0 +1,24 @@
+
+
+<h2>Edit</h2>
+<a href="/delete_user"> DELETE ACCT</a>
+
+<form action='/update' method='post'>
+	<label for='first_name'>First Name</label>
+	<input type='text' value='<%=@user.first_name%>'name='[user]first_name'> <br>
+	<label for='last_name'>Last Name</label>
+	<input type='text' value='<%=@user.last_name%>' name='[user]last_name'> <br>
+	<label for='email'>Email</label>
+	<input type='text' value='<%=@user.email%>' name='[user]email'> <br>
+	<label for='password'>Password</label>
+	<input type='password' value='<%=@user.password%>' name='[user]password'> <br>
+	<label for='ocupation'>Ocupation</label>
+	<input type='text' value='<%=@user.ocupation%>' name='[user]ocupation'> <br>
+	<label for='hobbies'>Hobbies</label>
+	<input type='text' value='<%=@user.hobbies%>' name='[user]hobbies'> <br>
+	<label for='sex'>Sex</label>
+	<input type='text' value='<%=@user.sex%>' name='[user]sex'> <br>
+	<input type='submit' value='Edit Profile'>
+
+
+</form>

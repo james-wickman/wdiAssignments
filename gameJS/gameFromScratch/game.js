@@ -33,6 +33,7 @@ var movingLR = 'right';
 var movingUD = 'up';
 
 
+
 var platformArray = [
 	{
 		height: 10,
@@ -212,7 +213,9 @@ creatingPlatforms = function() {
 		ctx.rect(platformArray[i].placeY, platformArray[i].placeX, platformArray[i].width, platformArray[i].height);
 		ctx.fillStyle = 'green';
 		ctx.fill();
+
 		ctx.closePath();
+
 
 	}
 }

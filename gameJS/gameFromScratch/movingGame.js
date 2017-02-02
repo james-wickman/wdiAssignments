@@ -3,7 +3,7 @@
 function movingBlock() {
 	if (movingLR == 'right') {
 		platformArray[10].placeY += .5;
-		if (platformArray[10].placeY >= canvas.width - 23) {
+		if (platformArray[10].placeY >= canvas.width - 13) {
 			movingLR = 'left';
 		}
 	}
@@ -18,7 +18,7 @@ function movingBlock() {
 function liftBlock() {
 	if (movingUD == 'up') {
 		platformArray[11].placeX -= .5;
-		if (platformArray[11].placeX <= 35) {
+		if (platformArray[11].placeX <= 29) {
 			movingUD = 'down';
 
 		}
