@@ -1,26 +1,18 @@
 
 
-<a href='/log_out'>Logout</a>
 
-
-<h2><%= @user.first_name %> <%= @user.last_name %>
+<h2><%= @user.full_name %>
 </h2>
 
 
 
+<h4><%= @user.info %>
+</h4>
 
 
-<% if @user.ocupation && @user.ocupation != '' %>
-<h3>Ocupation: <%= @user.ocupation %>
-<%end%>
-<% if @user.hobbies && @user.hobbies != '' %>
-<h3>Hobbies: <%= @user.hobbies %>
-<%end%>
-<% if @user.sex && @user.sex != '' %>
-<h3>Sex: <%= @user.sex %>
-<%end%>
 
-<h3> User since <%=@user.date_created %></h3>
+
+<h5> User since <%=@user.date_created %></h5>
 <a href='/edit_user'>Edit Profile</a>
 <a href='/blog_post'>Create Post</a>
 

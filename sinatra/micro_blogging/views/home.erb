@@ -1,4 +1,7 @@
 <h1>home</h1>
 
-<a href='/login'>Login</a>
-<a href="/sign_up">Sign Up</a>
+<% @users_with_posts.each do |my| %>
+	<%=my.first_name %>
+	<%=my.last_name %> <hr>
+
+<% end %>

@@ -5,15 +5,7 @@
 	<%= @viewed_user.last_name %><br>
 	<%= @viewed_user.email %><br>
 </h2>
-<% if @user.ocupation && @user.ocupation != '' %>
-	<h3>Ocupation: <%= @user.ocupation %><br>
-<%end%>
-<% if @user.hobbies && @user.hobbies != '' %>
-	<h3>Hobbies: <%= @user.hobbies %><br>
-<%end%>
-<% if @user.sex && @user.sex != '' %>
-	<h3>Sex: <%= @user.sex %><br>
-<%end%>
+<%= @user.info %>
 
 <h3> User since <%=@user.date_created %></h3>
 

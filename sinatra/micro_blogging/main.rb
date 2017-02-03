@@ -18,6 +18,7 @@ def current_user
 end
 get '/' do 
 	current_user
+	@users_with_posts = User.users_with_posts
 	if session[:user_id]
 		redirect '/userpage'
 	else
@@ -27,7 +28,7 @@ end
 post '/update' do 
 	current_user
 
-	@user.update_attributes(params[:user])
+	@user.edditing_user(params[:user])
 	if @user.update_attributes(params[:user])
 		redirect 'userpage'
 	else 

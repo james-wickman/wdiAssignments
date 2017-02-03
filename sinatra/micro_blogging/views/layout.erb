@@ -2,19 +2,37 @@
 <html>
 	<head>
 		<title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+		<link rel="stylesheet" href="main.css" type="text/css" />
 	</head>
 	<body>
+
+		<nav>
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo center">Twit</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href='/'>HOME</a></li>
+					<% if @user != nil %>
+						<li><a href='/feed'>News Feed</a></li>
+						<li><a href='/log_out'>Logout</a></li>
+					<% else %>
+						<li><a href='/login'>Login</a></li>
+						<li><a href="/sign_up">Sign Up</a></li>
+					<% end %>
+
+					
+				</ul>
+			</div>
+		</nav>
 
 
 		<%= flash[:notice] if flash[:notice] %>
 		<%= flash[:alert] if flash[:alert] %>
 
-		<% if @user != nil %>
-			<a href='/feed'>News Feed</a>
-		<% end %>
-
-		<a href='/'>HOME</a>
 		
 		<%= yield %>
+
+		<script src="main.js" type="text/javascript">
+	</script>
 	</body>
 </html>
