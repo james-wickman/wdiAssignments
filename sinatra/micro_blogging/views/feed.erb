@@ -1,0 +1,36 @@
+<h1> FEED </h1>
+
+
+<div>
+	<div>
+
+		<% @posts.each do |post| %>
+			<div>
+
+				<% @users.each do |user| %>
+					<% if user.id == post.user_id %><hr>
+						<a href='/user/<%=  user.id %>'><%= user.first_name %>
+						<%= user.last_name %> </a> <br>
+						<%= post.title %><br>
+						<%= post.date_created %><br>
+						<%= post.content %><br>
+						
+
+						
+						<a href="/view_comment?post_id=<%= post.id %>">View Comments</a>
+
+						<% if @user.id == user.id %>
+							<a href="/edit_post?post_id=<%= post.id %>">Edit Post</a>
+							<a href="/delete_post?post_id=<%= post.id %>">Delete Post</a>
+						<% end %>
+
+					<% end %>
+				<% end %>
+
+
+				<br> <hr>
+			</div>
+		<% end %>
+	</div>
+
+</div>

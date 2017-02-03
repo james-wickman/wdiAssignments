@@ -9,8 +9,12 @@
 		<%= flash[:notice] if flash[:notice] %>
 		<%= flash[:alert] if flash[:alert] %>
 
-		<a href='/'>HOME</a>
+		<% if @user != nil %>
+			<a href='/feed'>News Feed</a>
+		<% end %>
 
+		<a href='/'>HOME</a>
+		
 		<%= yield %>
 	</body>
 </html>

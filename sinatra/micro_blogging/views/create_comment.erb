@@ -1,0 +1,17 @@
+<h1>Create Comment</h1>
+
+
+<%= @post.title %><br>
+<%= @post.date_created %><br>
+<%= @post.content %><br>
+
+
+
+<form action='/make_comment' method='post'>
+	<h2>NEW COMMENT</h2>
+
+	<label for='content'>Comment</label> <br>
+	<textarea rows='15' cols='70' name='[comment]content'></textarea>
+	<input type='submit' value='Add Comment'>
+
+</form> 

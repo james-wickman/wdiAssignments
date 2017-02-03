@@ -1,0 +1,10 @@
+<h1> Edit Comments</h1>
+
+
+<form action="/edit_comment" method="post">
+
+	<label for='content'>Content</label>
+	<textarea rows='15' cols='70' name='[comment]content'><%=@comment.content%></textarea>
+
+	<input type='submit' value='Edit Comment'>
+</form>

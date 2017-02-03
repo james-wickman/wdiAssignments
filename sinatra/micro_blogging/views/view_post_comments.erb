@@ -1,0 +1,31 @@
+<h1>POST COMMENTS</h1>
+
+<%= @post.title %><br>
+<%= @post.content %><br> <hr>
+
+<div>
+	<% @comments.each do |comment| %>
+
+		<% @users.each do |user| %>
+			<% if user.id == comment.user_id  %>
+
+				<a href='/user/<%=  user.id %>'><%= user.first_name %>
+				<%= user.last_name %></a>
+				<%= comment.date_created %><br>
+				<%= comment.content %><br>
+				<% if comment.user_id == @user.id %>
+
+					<a href="/edit_comment?comment_id=<%= comment.id %>">Edit Comment</a>
+					<a href="/delete_comment?comment_id=<%= comment.id %>">Delete Comment</a> <hr >
+				<% end %>
+
+			<% end %>
+
+		<% end %>
+		
+
+
+	<%end %>
+<a href="/create_comment?post_id=<%= @post.id %>">Create Comment</a>
+
+</div>
