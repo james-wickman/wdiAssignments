@@ -24,11 +24,9 @@
 			<%= post.title %> <br>
 			<%= post.date_created %> <br>
 			<%= post.content %> <br>
-			<a href="/create_comment?post_id=<%= post.id %>">Create Comment</a>
 			<a href="/view_comment?post_id=<%= post.id %>">View Comments</a> <br>
 			<% if @user == @viewed_user %>
 				<a href="/edit_post?post_id=<%= post.id %>">Edit Post</a>
-				<a href="/delete_post?post_id=<%= post.id %>">Delete Post</a> 
 			<% end %>
 			<hr >
 		</div>
