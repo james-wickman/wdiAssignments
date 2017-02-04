@@ -16,17 +16,19 @@ class User < ActiveRecord::Base
 
 	end
 	def info
-		if !ocupation.nil? && !hobbies.nil? && !sex.nil?
+		if !ocupation.nil? && ocupation != '' && !hobbies.nil? && hobbies != '' && !sex.nil? && sex!= ''
 			"Ocupation: " + ocupation + "<br>" + "Hobbies: " + hobbies + "<br>" + "Sex: " + sex
-		elsif !hobbies.nil? && !sex.nil?
+		elsif !hobbies.nil? && hobbies != '' && !sex.nil? && sex != ''
 			 "Hobbies: " + hobbies + "<br>" + "Sex: " + sex
-		elsif !sex.nil? && !ocupation.nil?
+		elsif !sex.nil? && sex != '' && !ocupation.nil? && ocupation != ''
 			"Ocupation: " + ocupation + "<br>" + "Sex: " + sex
-		elsif !ocupation.nil?
+		elsif !hobbies.nil? && hobbies != '' && !ocupation.nil? && ocupation != ''
+			"Ocupation: " + ocupation + "<br>" + "Hobbies: " + hobbies
+		elsif !ocupation.nil? && ocupation != ''
 			"Ocupation: " + ocupation + "<br>"
-		elsif !hobbies.nil?
+		elsif !hobbies.nil? && hobbies != ''
 			"Hobbies: " + hobbies + "<br>"
-		elsif !sex.nil?
+		elsif !sex.nil? && sex != ''
 			"Sex: " + sex + "<br>"
 		end
 	end
@@ -49,9 +51,25 @@ class Post < ActiveRecord::Base
 	has_many :comments
 	belongs_to :users
 
+	def checking_content_length
+		content.length <= 150
+	end
+
 end
 
 class Comment < ActiveRecord::Base
 	belongs_to :users
 	belongs_to :posts
 end
+
+
+
+
+
+
+
+
+
+
+
+

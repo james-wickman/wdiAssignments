@@ -1,4 +1,4 @@
-
+ 
 
 
 <h2><%= @user.full_name %>
@@ -13,17 +13,19 @@
 
 
 <h5> User since <%=@user.date_created %></h5>
-<a href='/edit_user'>Edit Profile</a>
-<a href='/blog_post'>Create Post</a>
+<a href='/blog_post' class="btn-floating btn-large waves-effect waves-light red tooltipped" data-position="top" data-delay="50" data-tooltip="Create Comment"><i class="material-icons">add</i></a>
+<a href='/edit_user' class="btn-floating btn-large waves-effect waves-light red tooltipped" data-position="top" data-delay="50" data-tooltip="Edit User Profile"><i class="material-icons">mode_edit</i></a>
 
-<div>
+
+<div >
 	<% @post.each do |post| %>
-		<div> <hr>
-			<%= post.title %> <br>
-			<%= post.date_created %> <br>
-			<%= post.content %> <br>
-			<a href="/view_comment?post_id=<%= post.id %>">View Comments</a> <br>
-			<a href="/edit_post?post_id=<%= post.id %>">Edit Post</a>
+		<div class="user_page_posts"> <hr>
+			<h3 class="user_post_title"><%= post.title %></h3> <br>
+			<p class="date_created_post"><%= post.date_created %></p> <br>
+			<p class="content_post"><%= post.content %></p> <br>
+			<a href="/view_comment?post_id=<%= post.id %>" class="btn-floating btn-large waves-effect waves-light red tooltipped" data-position="top" data-delay="50" data-tooltip="View Comments"><i class="material-icons">label_outline</i></a>
+			<a href="/edit_post?post_id=<%= post.id %>" class="btn-floating btn-large waves-effect waves-light red tooltipped" data-position="top" data-delay="50" data-tooltip="Edit Post"><i class="material-icons">mode_edit</i></a>
+			
 			
 		</div>
 	<% end %>

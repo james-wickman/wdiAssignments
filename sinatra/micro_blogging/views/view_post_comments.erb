@@ -1,23 +1,26 @@
 <h1>POST COMMENTS</h1>
-
+ 
+<div class="post_with_comments">
 <%= @post.title %><br>
-<%= @post.content %><br> <hr>
-
+<p  class="content_post"><%= @post.content %></p><br> <hr>
+</div>
 <div>
 	<% @comments.each do |comment| %>
 
 		<% @users.each do |user| %>
 			<% if user.id == comment.user_id  %>
+			<div class="user_page_posts">
 
 				<a href='/user/<%=  user.id %>'><%= user.first_name %>
 				<%= user.last_name %></a>
 				<%= comment.date_created %><br>
-				<%= comment.content %><br>
+				<p class="content_post"><%= comment.content %></p><br>
 				<% if comment.user_id == @user.id %>
 
 					<a href="/edit_comment?comment_id=<%= comment.id %>">Edit Comment</a>
 					<a href="/delete_comment?comment_id=<%= comment.id %>">Delete Comment</a> <hr >
 				<% end %>
+			</div>
 
 			<% end %>
 
@@ -26,6 +29,9 @@
 
 
 	<%end %>
-<a href="/create_comment?post_id=<%= @post.id %>">Create Comment</a>
+
+<a href="/create_comment?post_id=<%= @post.id %>" class="btn-floating btn-large waves-effect waves-light red tooltipped" data-position="top" data-delay="50" data-tooltip="Create Comment"><i class="material-icons">library_add</i></a>
+<!-- <a href="/create_comment?post_id=<%= @post.id %>">Create Comment</a> -->
+
 
 </div>

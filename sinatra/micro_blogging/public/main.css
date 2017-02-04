@@ -1,3 +1,53 @@
 html {
-	background: lightblue;
+	background: #7ce7f9;
 }
+
+
+.user_page_posts {
+	margin-left: 50px;
+	margin-top: 30px;
+	background: #cc7728;
+	border: 1px solid blue;
+
+}
+
+.flash {
+	border: 1px solid black;
+	background: white;
+	display: inline-block;
+
+}
+.date_created_post {
+	display: inline-block;
+	float: right;
+	float: top;
+}
+.user_post_title {
+	display: inline-block;
+
+}
+.name_or_user_post {
+	color: #961818;
+	font-size: 25px;
+}
+textarea {
+	height: 150px;
+}
+form {
+	background:#ffd289;
+	border: 1px solid blue;
+}
+.post_with_comments {
+	background: #cc7728;
+}
+.content_post {
+	word-wrap: break-word;
+}
+
+.delete_acct {
+	background: red;
+}
+
+
+
+

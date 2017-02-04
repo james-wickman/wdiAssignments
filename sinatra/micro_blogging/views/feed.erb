@@ -1,33 +1,29 @@
 <h1> FEED </h1>
 
 
-<div>
-	<div>
 
-		<% @posts.each do |post| %>
-			<div>
+<% @posts.each do |post| %>
+	<% @users.each do |user| %>
+		<% if user.id == post.user_id %><hr>
+			<div class='user_page_posts'>
+				<a class=" name_or_user_post" href='/user/<%=  user.id %>'><%= user.first_name %>
+				<%= user.last_name %> </a> <br>
+				<%= post.title %><br>
+				<%= post.date_created %><br>
+				<p  class="content_post"><%= post.content %></p><br>
+				
+				<a href="/view_comment?post_id=<%= post.id %>" class="btn-floating btn-large waves-effect waves-light red tooltipped" data-position="top" data-delay="50" data-tooltip="View Comments"><i class="material-icons">label_outline</i></a>
 
-				<% @users.each do |user| %>
-					<% if user.id == post.user_id %><hr>
-						<a href='/user/<%=  user.id %>'><%= user.first_name %>
-						<%= user.last_name %> </a> <br>
-						<%= post.title %><br>
-						<%= post.date_created %><br>
-						<%= post.content %><br>
-						
-						<a href="/view_comment?post_id=<%= post.id %>">View Comments</a>
-
-						<% if @user.id == user.id %>
-							<a href="/edit_post?post_id=<%= post.id %>">Edit Post</a>
-						<% end %>
-
-					<% end %>
+				<% if @user.id == user.id %>
+					<a href="/edit_post?post_id=<%= post.id %>" class="btn-floating btn-large waves-effect waves-light red tooltipped" data-position="top" data-delay="50" data-tooltip="Edit Post"><i class="material-icons">mode_edit</i></a>
+					<!-- <a href="/edit_post?post_id=<%= post.id %>">Edit Post</a> -->
 				<% end %>
-
-
-				<br> <hr>
 			</div>
+			<br> <hr>
 		<% end %>
-	</div>
 
-</div>
+	<% end %>
+
+
+	
+<% end %>

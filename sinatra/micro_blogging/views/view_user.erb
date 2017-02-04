@@ -1,24 +1,25 @@
-<h1>View User</h1>
 
 <h2>
-	<%= @viewed_user.first_name %> <br>
-	<%= @viewed_user.last_name %><br>
-	<%= @viewed_user.email %><br>
-</h2>
-<%= @user.info %>
+	<%= @viewed_user.full_name %> </h2> <br>
+	
+	<h4><%= @viewed_user.email %> <br>
 
-<h3> User since <%=@user.date_created %></h3>
+<%= @viewed_user.info %>
+</h4>
+<h5> User since <%=@viewed_user.date_created %></h5>
 
 
 <div>
 	<% @post.each do |post| %>
-		<div> <hr>
+		<div class="user_page_posts"> <hr>
 			<%= post.title %> <br>
 			<%= post.date_created %> <br>
-			<%= post.content %> <br>
-			<a href="/view_comment?post_id=<%= post.id %>">View Comments</a> <br>
+			<p  class="content_post"><%= post.content %> <br></p>
+			<a href="/view_comment?post_id=<%= post.id %>" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">label_outline</i></a>
+
 			<% if @user == @viewed_user %>
-				<a href="/edit_post?post_id=<%= post.id %>">Edit Post</a>
+			<a href="/edit_post?post_id=<%= post.id %>" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
+			
 			<% end %>
 			<hr >
 		</div>

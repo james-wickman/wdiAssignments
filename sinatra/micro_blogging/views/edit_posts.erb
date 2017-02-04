@@ -4,7 +4,7 @@
 <form action="/edit_post" method="post">
 
 	<label for='content'>Content</label>
-	<textarea rows='15' cols='70' name='[post]content'><%=@post.content%></textarea>
+	<textarea rows='15' cols='70' maxlength="150" name='[post]content'><%=@post.content%></textarea>
 
 	<input type='submit' value='Edit Post'>
 </form>

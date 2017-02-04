@@ -41,7 +41,7 @@ post '/old_user' do
 		@user = User.where(email: params[:user][:email]).last
 		if @user.password == params[:user][:password]
 			session[:user_id] = @user.id 
-			flash[:notice] = 'Signed In Successfull'
+			flash[:notice] = 'Signed In Successful'
 			redirect '/userpage'
 		else 
 			flash[:alert] = 'Email or Password incorrect'
@@ -103,6 +103,8 @@ get '/sign_up' do
 end
 get '/delete_user' do 
 	current_user
+	Post.where(user_id: current_user.id).destroy_all
+	Comment.where(user_id: current_user.id).destroy_all
 	@user.destroy
 	session[:user_id] = nil
 	redirect '/'
@@ -112,9 +114,14 @@ post '/create_post' do
 	if params[:post][:title] != '' && params[:post][:content] != '' 
 		params[:post][:date_created] = Time.now
 		@post = @user.posts.new(params[:post])
-		if @post.save
-			flash[:notice] = 'Added Post'
-			redirect '/'
+		if @post.checking_content_length
+			if @post.save
+				flash[:notice] = 'Added Post'
+				redirect '/'
+			else
+				flash[:alert] = 'something went wrong'
+				redirect '/blog_post'
+			end
 		else
 			flash[:alert] = 'something went wrong'
 			redirect '/blog_post'
@@ -141,16 +148,22 @@ get '/create_comment' do
 end 
 get '/view_comment' do 
 	current_user
-	current_comment = params[:post_id]
+	if session[:user_id] != nil
+		current_comment = params[:post_id]
 
-	@post = Post.find(current_comment)
-	@users = User.all 
-	
-	@comments = Comment.where(post_id: current_comment)
-	erb :view_post_comments
+		@post = Post.find(current_comment)
+		@users = User.all 
+		
+		@comments = Comment.where(post_id: current_comment)
+		erb :view_post_comments
+	else
+		flash[:alert] = "Please Login first"
+		redirect '/login'
+	end
 end 
 post '/make_comment' do 
 	current_user
+	
 	@post = Post.find(current_comment)
 	# @viewed_user = User.find(@post.user_id)
 	if params[:comment][:content] != ''
@@ -159,7 +172,7 @@ post '/make_comment' do
 		@comment = @post.comments.new(params[:comment])
 		if @comment.save
 			flash[:notice] = 'Added Comment'
-			redirect '/'
+			redirect '/feed'
 		else
 			flash[:alert] = 'something went wrong'
 			redirect '/create_comment'
@@ -169,6 +182,7 @@ post '/make_comment' do
 		flash[:alert] = 'Please make sure you fill out comment'
 		reroute '/create_comment'
 	end	
+	
 end 
 get '/edit_post' do 
 	current_user
@@ -184,7 +198,7 @@ post '/edit_post' do
 		@post.update_attributes(params[:post])
 		if @post.update_attributes(params[:post])
 			flash[:notice] = 'Changes Saved'
-			redirect '/userpage'
+			redirect '/feed'
 		else 
 			flash[:alert] = 'Something Went wrong'
 			redirect '/userpage'
@@ -193,7 +207,7 @@ post '/edit_post' do
 end 
 get '/delete_post' do 
 	current_user
-	@post = Post.find(params[:post_id])
+	@post = Post.find(params[:post_id]).last
 	@post.destroy
 	redirect '/'
 end 
