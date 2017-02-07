@@ -1,0 +1,82 @@
+body {
+  margin: 5px;
+}
+
+.leaf {
+	opacity: 1;
+	position: absolute;
+	display: inline-block;
+}
+
+.first_leaf {
+	margin-left: 50px;
+	margin-top: 40px;
+}
+.second_leaf {
+	margin-left: 100px;
+	margin-top: 40px;
+}
+.third_leaf {
+	margin-left: 150px;
+	margin-top: 40px;
+}
+.fourth_leaf {
+	margin-left: 200px;
+	margin-top: 40px;
+}
+.fifth_leaf {
+	margin-left: 230px;
+	margin-top: 60px;
+}
+.sixth_leaf {
+	margin-left: 270px;
+	margin-top: 40px;
+}
+.seventh_leaf {
+	margin-left: 300px;
+	margin-top: 80px;
+}
+.eighth_leaf {
+	margin-left: 320px;
+	margin-top: 40px;
+}
+.ninth_leaf {
+	margin-left: 350px;
+	margin-top: 60px;
+}
+.tenth_leaf {
+	margin-left: 400px;
+	margin-top: 40px;
+}
+.eleventh_leaf {
+	margin-left: 450px;
+	margin-top: 40px;
+
+}
+.twelfth_leaf {
+	margin-left: 500px;
+	margin-top: 40px;
+}
+
+
+/*.block {
+	
+	height: 205px;
+	width: 100%;
+	background-color: white;
+	position: absolute;
+	z-index: 1;
+
+}
+*/
+
+.leaf_holder {
+	width: 100%;
+	background-color: lightblue;
+	height: 150px;
+}
+
+
+
+
+
