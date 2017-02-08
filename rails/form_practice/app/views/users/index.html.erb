@@ -1,0 +1,26 @@
+
+
+<%= link_to "New", new_user_path, method: :get %>
+
+
+
+
+<%= text_area_tag(:message, "hi, nice site!", size: "24x6") %>
+<%= color_field(:user, :first_name)  %>
+<%= search_field(:user, :first_name) %>
+
+
+
+
+<% @user.each do |user| %>
+
+	<%= link_to "#{user.first_name} #{user.last_name}", user_path(user.id), method: :get %>
+	
+	<br>
+
+	<hr>
+
+<%end %>
+
+
+

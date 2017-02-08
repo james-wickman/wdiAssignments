@@ -1,4 +1,4 @@
-body {
+body { 
   margin: 5px;
 }
 
@@ -8,52 +8,52 @@ body {
 	display: inline-block;
 }
 
-.first_leaf {
+#first_leaf {
 	margin-left: 50px;
 	margin-top: 40px;
 }
-.second_leaf {
+#second_leaf {
 	margin-left: 100px;
 	margin-top: 40px;
 }
-.third_leaf {
+#third_leaf {
 	margin-left: 150px;
 	margin-top: 40px;
 }
-.fourth_leaf {
+#fourth_leaf {
 	margin-left: 200px;
 	margin-top: 40px;
 }
-.fifth_leaf {
+#fifth_leaf {
 	margin-left: 230px;
 	margin-top: 60px;
 }
-.sixth_leaf {
+#sixth_leaf {
 	margin-left: 270px;
 	margin-top: 40px;
 }
-.seventh_leaf {
+#seventh_leaf {
 	margin-left: 300px;
 	margin-top: 80px;
 }
-.eighth_leaf {
+#eighth_leaf {
 	margin-left: 320px;
 	margin-top: 40px;
 }
-.ninth_leaf {
+#ninth_leaf {
 	margin-left: 350px;
 	margin-top: 60px;
 }
-.tenth_leaf {
+#tenth_leaf {
 	margin-left: 400px;
 	margin-top: 40px;
 }
-.eleventh_leaf {
+#eleventh_leaf {
 	margin-left: 450px;
 	margin-top: 40px;
 
 }
-.twelfth_leaf {
+#twelfth_leaf {
 	margin-left: 500px;
 	margin-top: 40px;
 }

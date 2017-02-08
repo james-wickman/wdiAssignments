@@ -1,0 +1,6 @@
+<h1>Tweet#show</h1>
+<p>Find me in app/views/tweet/show.html.erb</p>
+
+Tweet:
+<%= @tweet.content %>
+<%= link_to 'Delete Tweet', tweet_path(@tweet), method: :delete, class: 'delete-tweet' %>

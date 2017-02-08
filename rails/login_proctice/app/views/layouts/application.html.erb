@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LoginProctice</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<%= link_to 'Sign In', sessions_new_path %>
+  	<%= link_to 'Sign Out', sessions_destroy_path, method: :delete %>
+  	<%=flash[:notice] if flash[:notice] %>
+  	<%=flash[:alert] if flash[:alert] %>
+
+    <%= yield %>
+  </body>
+</html>

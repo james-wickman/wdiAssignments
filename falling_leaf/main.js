@@ -1,57 +1,31 @@
-var leaf = $('.first_leaf');
+var leaf = $('.first_leaf'); 
 var leaves = $('#leaf');
 var allClassLeaves = $('.leaf');
 var randomNumber = 1
 var tl = new TimelineMax({repeat: 0});
 tl.set(leaf, { rotation: 5 });
-var leaf_array = [$('.first_leaf'), $('.second_leaf'), $('.third_leaf'), $('.fourth_leaf'), $('.fifth_leaf'), $('.sixth_leaf'), $('.seventh_leaf'), $('.eighth_leaf'), $('.ninth_leaf'), $('.tenth_leaf'), $('.eleventh_leaf'), $('.twelfth_leaf')];
+var leaf_array = [$('#first_leaf'), $('#second_leaf'), $('#third_leaf'), $('#fourth_leaf'), $('#fifth_leaf'), $('#sixth_leaf'), $('#seventh_leaf'), $('#eighth_leaf'), $('#ninth_leaf'), $('#tenth_leaf'), $('#eleventh_leaf'), $('#twelfth_leaf')];
 
 
 
-checkThere();
-
-
-function runCode(){
-  // random number generator to assign a random leaf to fall
-    randomNumber = Math.floor((Math.random() * 12) + 1);
-    console.log(randomNumber);
-
-  // has to be on class not id for this too run.  
-    
-    leaf = leaf_array[randomNumber - 1]
-    swingLeaf(leaf);
-
-}
-
-
-
-// the function swingLeaf runs to fast for a background tab  it stacks up
-//this makes it not run when tab is not focused
-function checkThere() {
-  function myFunction() {
-      if(window.blurred) {
-          setTimeout(checkThere, 1000);
-          return;
-      }else {
-
-      runCode();
-      setTimeout(myFunction, 10000);
-    }
-  };
-
-  window.onblur = function() {window.blurred = true;};
-  window.onfocus = function() {window.blurred = false;};
-  setTimeout(myFunction, 10000);
-};
+swingLeaf();
 
 
 
 //this will cause the leaf to 'float' down and disapear then reapear back in orriginal spot.
-function swingLeaf(leaf) {
+function swingLeaf() {
+  randomNumber = Math.floor((Math.random() * 12) + 1);
+    console.log(randomNumber);
+
+    
+    leaf = leaf_array[randomNumber - 1]
   tl.add([
-    TweenMax.to(leaf,0.03, {
-      scale:1,
-    })
+    TweenMax.fromTo(leaf,1,{
+
+    scale:0.8,
+  },{
+    scale:1,
+  })
   ]).add([
     TweenMax.to(leaf, 1.5, {
       left: 150,
@@ -92,6 +66,7 @@ function swingLeaf(leaf) {
     scale:0,
   },{
     scale:1,
+    onComplete:swingLeaf,
   })
     
   ])
