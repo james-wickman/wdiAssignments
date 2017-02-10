@@ -1,6 +1,6 @@
 class CreateFriends < ActiveRecord::Migration[5.0]
   def change
-    create_table :friends do |t|
+    create_table :friendships do |t|
       t.string :user_id
       t.string :friend_id
 
