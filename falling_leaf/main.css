@@ -7,55 +7,65 @@ body {
 	position: absolute;
 	display: inline-block;
 }
-
+.leaf_image {
+	height: 50px;
+}
 #first_leaf {
 	margin-left: 50px;
 	margin-top: 40px;
-}
+} 
 #second_leaf {
-	margin-left: 100px;
-	margin-top: 40px;
+	margin-left: 120px;
+	margin-top: 70px;
 }
 #third_leaf {
-	margin-left: 150px;
-	margin-top: 40px;
+	margin-left: 180px;
+	margin-top: 20px;
 }
 #fourth_leaf {
-	margin-left: 200px;
-	margin-top: 40px;
+	margin-left: 250px;
+	margin-top: 48px;
 }
 #fifth_leaf {
-	margin-left: 230px;
+	margin-left: 340px;
 	margin-top: 60px;
 }
 #sixth_leaf {
-	margin-left: 270px;
-	margin-top: 40px;
+	margin-left: 400px;
+	margin-top: 42px;
 }
 #seventh_leaf {
-	margin-left: 300px;
+	margin-left: 480px;
 	margin-top: 80px;
 }
 #eighth_leaf {
-	margin-left: 320px;
-	margin-top: 40px;
+	margin-left: 545px;
+	margin-top: 15px;
 }
 #ninth_leaf {
-	margin-left: 350px;
+	margin-left: 600px;
 	margin-top: 60px;
 }
 #tenth_leaf {
-	margin-left: 400px;
-	margin-top: 40px;
+	margin-left: 680px;
+	margin-top: 80px;
 }
 #eleventh_leaf {
-	margin-left: 450px;
-	margin-top: 40px;
+	margin-left: 760px;
+	margin-top: 20px;
 
 }
 #twelfth_leaf {
-	margin-left: 500px;
+	margin-left: 830px;
 	margin-top: 40px;
+}
+#thirteenth_leaf {
+	margin-left: 890px;
+	margin-top: 70px;
+}
+#fourteenth_leaf {
+	margin-left: 960px;
+	margin-top: 30px;
 }
 
 

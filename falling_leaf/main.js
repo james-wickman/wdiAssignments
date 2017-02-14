@@ -4,7 +4,7 @@ var allClassLeaves = $('.leaf');
 var randomNumber = 1
 var tl = new TimelineMax({repeat: 0});
 tl.set(leaf, { rotation: 5 });
-var leaf_array = [$('#first_leaf'), $('#second_leaf'), $('#third_leaf'), $('#fourth_leaf'), $('#fifth_leaf'), $('#sixth_leaf'), $('#seventh_leaf'), $('#eighth_leaf'), $('#ninth_leaf'), $('#tenth_leaf'), $('#eleventh_leaf'), $('#twelfth_leaf')];
+var leaf_array = [$('#first_leaf'), $('#second_leaf'), $('#third_leaf'), $('#fourth_leaf'), $('#fifth_leaf'), $('#sixth_leaf'), $('#seventh_leaf'), $('#eighth_leaf'), $('#ninth_leaf'), $('#tenth_leaf'), $('#eleventh_leaf'), $('#twelfth_leaf'), $('#thirteenth_leaf'), $('#fourteenth_leaf')];
 
 
 
@@ -14,7 +14,7 @@ swingLeaf();
 
 //this will cause the leaf to 'float' down and disapear then reapear back in orriginal spot.
 function swingLeaf() {
-  randomNumber = Math.floor((Math.random() * 12) + 1);
+  randomNumber = Math.floor((Math.random() * 14) + 1);
     console.log(randomNumber);
 
     
